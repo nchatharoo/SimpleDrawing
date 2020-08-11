@@ -9,11 +9,17 @@
 import SwiftUI
 import PencilKit
 
+enum ActiveSheet {
+    case color
+    case inkType
+}
+
 struct ToolBarView: View {
     @Binding var canvasView: PKCanvasView
     @Binding var show: Bool
     @Binding var color: UIColor
-    
+    @Binding var activeSheet: ActiveSheet
+
     var body: some View {
         ZStack {
             Rectangle()
@@ -21,9 +27,10 @@ struct ToolBarView: View {
             .cornerRadius(15)
             .foregroundColor(.gray)
             
-            HStack {
+            HStack(spacing: 20) {
                 Button(action: {
                     self.show.toggle()
+                    self.activeSheet = .color
                 }) {
                     ZStack {
                         Circle()
@@ -33,6 +40,18 @@ struct ToolBarView: View {
                         Circle()
                             .stroke(Color.black, lineWidth: 3)
                             .frame(width: 50, height: 50)
+                    }
+                }
+                
+                Button(action: {
+                    self.show.toggle()
+                    self.activeSheet = .inkType
+                }) {
+                    ZStack {
+                        Image(systemName: "hand.draw")
+                            .resizable()
+                            .frame(width: 35, height: 35)
+                            .foregroundColor(.black)
                     }
                 }
                 
