@@ -13,6 +13,8 @@
 		8EDAFB2724E2B4E700D682D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EDAFB2624E2B4E700D682D8 /* Assets.xcassets */; };
 		8EDAFB2A24E2B4E700D682D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EDAFB2924E2B4E700D682D8 /* Preview Assets.xcassets */; };
 		8EDAFB2D24E2B4E700D682D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EDAFB2B24E2B4E700D682D8 /* LaunchScreen.storyboard */; };
+		8EDAFB3524E2B7C100D682D8 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDAFB3424E2B7C100D682D8 /* CanvasView.swift */; };
+		8EDAFB3724E2B82500D682D8 /* ToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDAFB3624E2B82500D682D8 /* ToolBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		8EDAFB2924E2B4E700D682D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8EDAFB2C24E2B4E700D682D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EDAFB2E24E2B4E700D682D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EDAFB3424E2B7C100D682D8 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		8EDAFB3624E2B82500D682D8 /* ToolBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				8EDAFB2024E2B4D700D682D8 /* AppDelegate.swift */,
 				8EDAFB2224E2B4D700D682D8 /* SceneDelegate.swift */,
 				8EDAFB2424E2B4D700D682D8 /* ContentView.swift */,
+				8EDAFB3424E2B7C100D682D8 /* CanvasView.swift */,
+				8EDAFB3624E2B82500D682D8 /* ToolBarView.swift */,
 				8EDAFB2624E2B4E700D682D8 /* Assets.xcassets */,
 				8EDAFB2B24E2B4E700D682D8 /* LaunchScreen.storyboard */,
 				8EDAFB2E24E2B4E700D682D8 /* Info.plist */,
@@ -148,6 +154,8 @@
 			files = (
 				8EDAFB2124E2B4D700D682D8 /* AppDelegate.swift in Sources */,
 				8EDAFB2324E2B4D700D682D8 /* SceneDelegate.swift in Sources */,
+				8EDAFB3724E2B82500D682D8 /* ToolBarView.swift in Sources */,
+				8EDAFB3524E2B7C100D682D8 /* CanvasView.swift in Sources */,
 				8EDAFB2524E2B4D700D682D8 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +297,7 @@
 				DEVELOPMENT_TEAM = P9CD4D4F5T;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SimpleDrawing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +318,7 @@
 				DEVELOPMENT_TEAM = P9CD4D4F5T;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SimpleDrawing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
