@@ -21,7 +21,7 @@ struct ContentView: View {
             ZStack {
                 Rectangle()
                     .stroke(Color.black, lineWidth: 3)
-                Canvas(canvasView: canvasView)
+                Canvas(canvasView: canvasView, selectedColor: $color)
             }
             .frame(width: UIScreen.main.bounds.width - 50, height: UIScreen.main.bounds.height - 200)
             Spacer()
@@ -32,7 +32,7 @@ struct ContentView: View {
                                            message: nil,
                                            buttons: [
                                             .default(Text("Black"), action:  { self.color = .black }),
-                                            .default(Text("Red"), action:  { self.color = .systemRed }),
+                                            .default(Text("Red"), action:  { color = .systemRed }),
                                             .default(Text("Pink"), action:  { self.color = .systemPink }),
                                             .default(Text("Orange"), action:  { self.color = .systemOrange }),
                                             .default(Text("Yellow"), action:  { self.color = .systemYellow }),
