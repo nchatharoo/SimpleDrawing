@@ -35,24 +35,25 @@ struct ContentView: View {
                         return ActionSheet(title: Text("Select a color"),
                                            message: nil,
                                            buttons: [
-                                            .default(Text("Black"), action:  { self.color = .black }),
-                                            .default(Text("Red"), action:  { color = .systemRed }),
+                                            .default(
+                                                Text("⚫"), action:  { self.color = .black }),
+                                            .default(Text("🔴"), action:  { color = .systemRed }),
                                             .default(Text("Pink"), action:  { self.color = .systemPink }),
-                                            .default(Text("Orange"), action:  { self.color = .systemOrange }),
-                                            .default(Text("Yellow"), action:  { self.color = .systemYellow }),
-                                            .default(Text("Green"), action:  { self.color = .systemGreen }),
+                                            .default(Text("🟠"), action:  { self.color = .systemOrange }),
+                                            .default(Text("🟡"), action:  { self.color = .systemYellow }),
+                                            .default(Text("🟢"), action:  { self.color = .systemGreen }),
                                             .default(Text("Indigo"), action:  { self.color = .systemIndigo }),
-                                            .default(Text("Blue"), action:  { self.color = .systemBlue }),
-                                            .default(Text("White"), action:  { self.color = .white }),
+                                            .default(Text("🔵"), action:  { self.color = .systemBlue }),
+                                            .default(Text("⚪"), action:  { self.color = .white }),
                                             .cancel()
                         ])
                     } else {
                         return ActionSheet(title: Text("Select a type"),
                                            message: nil,
                                            buttons: [
-                                            .default(Text("Pen"), action:  { self.canvasView.tool = PKInkingTool(.pen, color: self.color, width: 15) }),
-                                            .default(Text("Marker"), action:  { self.canvasView.tool = PKInkingTool(.marker, color: self.color, width: 15) }),
-                                            .default(Text("Pencil"), action:  { self.canvasView.tool = PKInkingTool(.pencil, color: self.color, width: 15) }),
+                                            .default(Text("🖋️ pen"), action:  { self.canvasView.tool = PKInkingTool(.pen, color: self.color, width: 15) }),
+                                            .default(Text("🖊️ marker"), action:  { self.canvasView.tool = PKInkingTool(.marker, color: self.color, width: 15) }),
+                                            .default(Text("✏️ pencil"), action:  { self.canvasView.tool = PKInkingTool(.pencil, color: self.color, width: 15) }),
                                             .cancel()
                         ])
                     }
