@@ -20,10 +20,14 @@ struct ContentView: View {
             Spacer()
             ZStack {
                 Rectangle()
-                    .stroke(Color.black, lineWidth: 3)
+                    .stroke(Color.primary, lineWidth: 3)
                 Canvas(canvasView: canvasView, selectedColor: $color)
             }
-            .frame(width: UIScreen.main.bounds.width - 50, height: UIScreen.main.bounds.height - 200)
+            .frame(minWidth: 0,
+                   maxWidth: .infinity,
+                   minHeight: 0,
+                   maxHeight: .infinity,
+                   alignment: .center)
             Spacer()
             ToolBarView(canvasView: $canvasView, show: $show, color: $color, activeSheet: $activeSheet)
                 .actionSheet(isPresented: $show) {
