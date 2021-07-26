@@ -23,9 +23,9 @@ struct ToolBarView: View {
     var body: some View {
         ZStack {
             Rectangle()
-            .frame(width: 200, height: 100)
-            .cornerRadius(15)
-            .foregroundColor(.gray)
+                .frame(maxWidth: .infinity, alignment: .center)
+                .frame(height: 100)
+                .foregroundColor(.white)
             
             HStack(spacing: 20) {
                 Button(action: {
@@ -38,7 +38,7 @@ struct ToolBarView: View {
                             .frame(width: 50, height: 50)
                         
                         Circle()
-                            .stroke(Color.black, lineWidth: 3)
+                            .stroke(Color.secondary, lineWidth: 3)
                             .frame(width: 50, height: 50)
                     }
                 }
